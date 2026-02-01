@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff3f8;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 { margin-bottom: 15px; }
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-box {
+    background: white;
+    padding: 15px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-box label { display: block; margin-top: 8px; font-size: 13px; }
+.form-box input, .form-box select { width: 100%; padding: 5px; margin-top: 4px; }
+
+button {
+    margin-top: 10px;
+    padding: 7px;
+    width: 100%;
+    background: #ff6f91;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.card-box { display: flex; align-items: center; justify-content: center; }
+
+.card {
+    position: relative;
+    width: 260px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-size: 15px;
+}
+
+/* font sizes for headings */
+.card h2 { font-size: 20px; margin:5px 0; }
+.card h3 { font-size: 17px; margin:5px 0; }
+.card p { font-size: 13px; margin:2px 0; }
+
+/* event backgrounds */
+.birthday { background: #ffd6e7; }
+.farewell { background: #e6f0ff; }
+.anniversary { background: #fff2cc; }
+.getTogether { background: #d5f0e7; }
+.meeting { background: #f0e6ff; }
+
+/* bg-text for card */
+.bg-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: rgba(0,0,0,0.08);
+    font-weight: bold;
+}
+
+.emoji { font-size: 28px; margin-bottom: 8px; }
+
+/* PRINT ONLY CARD */
+@media print {
+    body * { visibility: hidden; }
+    #card { visibility: visible; position: absolute; left:0; top:0; width: 100%; }
+}

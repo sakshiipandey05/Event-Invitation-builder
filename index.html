@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Invitation Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Event Invitation Builder</h1>
+
+    <div class="main">
+
+        <!-- Form -->
+        <div class="form-box">
+            <label>Event Type</label>
+            <select id="eventType" onchange="updateEvent()">
+                <option value="birthday">Birthday Party</option>
+                <option value="farewell">Farewell</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="getTogether">Get Together</option>
+                <option value="meeting">Professional Meeting</option>
+            </select>
+
+            <label>Font Style</label>
+            <select id="fontStyle" onchange="changeFont()">
+                <option value="'Poppins', sans-serif">Poppins</option>
+                <option value="'Arial', sans-serif">Arial</option>
+                <option value="'Verdana', sans-serif">Verdana</option>
+                <option value="'Courier New', monospace">Courier</option>
+                <option value="'Georgia', serif">Georgia</option>
+            </select>
+
+            <label>Event Name</label>
+            <input type="text" id="eventName" placeholder="Enter event name" oninput="updateText()">
+
+            <label>Host Name</label>
+            <input type="text" id="hostName" placeholder="Host name" oninput="updateText()">
+
+            <label>Date</label>
+            <input type="date" id="eventDate" oninput="updateText()">
+
+            <label>Time</label>
+            <input type="time" id="eventTime" oninput="updateText()">
+
+            <label>Venue</label>
+            <input type="text" id="venue" placeholder="Event venue" oninput="updateText()">
+
+            <button onclick="downloadCard()">Download Card</button>
+        </div>
+
+        <!-- Card Preview -->
+        <div class="card-box">
+            <div class="card birthday" id="card">
+                <div class="bg-text" id="bgText">HAPPY BIRTHDAY</div>
+                <div class="emoji" id="emoji">🎂🎈</div>
+
+                <h2 id="cTitle">Birthday Party</h2>
+                <h3 id="cName">Your Event</h3>
+
+                <p>Host: <span id="cHost">Name</span></p>
+                <p>Date: <span id="cDate">--</span></p>
+                <p>Time: <span id="cTime">--</span></p>
+                <p>Venue: <span id="cVenue">Venue</span></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
